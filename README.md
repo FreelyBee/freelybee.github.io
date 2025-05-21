@@ -1,6 +1,6 @@
-# FreelyBee Website
+# Freely Bee Website
 
-A modern, minimalist Jekyll website inspired by Magnolia's design aesthetic. This website focuses on creating beautiful, meaningful spaces and sharing inspiring content.
+A modern, minimalist Jekyll website inspired by simple, clean design aesthetics. This website focuses on creating beautiful, meaningful spaces and sharing inspiring content.
 
 ## Features
 
@@ -11,7 +11,7 @@ A modern, minimalist Jekyll website inspired by Magnolia's design aesthetic. Thi
 
 ## Prerequisites
 
-- Ruby version 2.7.0 or higher
+- Ruby version 2.7.0 or higher (e.g. 3.3.4)
 - RubyGems
 - GCC and Make
 
@@ -43,6 +43,3 @@ A modern, minimalist Jekyll website inspired by Magnolia's design aesthetic. Thi
 - `index.html` - Homepage
 - `about.html` - About page
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
