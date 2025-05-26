@@ -147,12 +147,19 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url('/assets/images/freely-bee-life.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin-top: -80px; /* Offset for header height */
     padding: 80px 0; /* Add padding to account for header */
+}
+
+.hero-section.life {
+    background-image: url('/assets/images/freely-bee-life.png');
+}
+
+.hero-section.farm {
+    background-image: url('/assets/images/freely-bee-life.png');
 }
 
 .hero-section::before {
