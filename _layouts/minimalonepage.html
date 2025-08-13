@@ -26,6 +26,11 @@
     <footer class="site-footer">
         <div class="footer-content">
             <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="{{ '/terms/' | relative_url }}">Terms</a>
+                <span class="separator" aria-hidden="true">•</span>
+                <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+            </div>
         </div>
     </footer>
 </body>
