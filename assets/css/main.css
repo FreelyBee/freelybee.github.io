@@ -348,6 +348,14 @@ a {
         padding: var(--spacing-md) 0;
     }
 
+    /* Legal pages: prevent overlap with fixed header */
+    .legal-hero {
+        margin-top: 0; /* override base -80px */
+    }
+    .legal-hero .hero-content {
+        transform: none; /* avoid upward shift on mobile */
+    }
+
     .grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);
