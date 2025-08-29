@@ -286,6 +286,104 @@ a {
     background-color: var(--accent-color);
 }
 
+/* Form styles */
+.form-card {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: var(--spacing-sm);
+    background: #fff;
+    border: 1px solid rgba(22, 22, 22, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.contact-form-wrapper form {
+    display: grid;
+    gap: var(--spacing-sm);
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    border: 1px solid rgba(22, 22, 22, 0.2);
+    border-radius: 6px;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form-wrapper input:focus,
+.contact-form-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--link-color);
+    box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.15);
+}
+
+.contact-form-wrapper textarea {
+    line-height: 1.5;
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-form-wrapper textarea::placeholder {
+    color: rgba(22, 22, 22, 0.5);
+}
+
+.contact-form-wrapper button {
+    justify-self: start;
+    padding: 12px 22px;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-form-wrapper button:hover {
+    background: #000;
+    border-color: #000;
+}
+
+.contact-form-wrapper .field {
+    display: grid;
+    gap: 8px;
+}
+
+.contact-form-wrapper label {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    color: var(--primary-color);
+    letter-spacing: 0.3px;
+}
+
+.contact-form-wrapper .hint {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: var(--secondary-color);
+}
+
+.contact-form-wrapper input::placeholder {
+    color: rgba(22, 22, 22, 0.5);
+}
+
+.contact-form-wrapper button:focus-visible {
+    outline: 3px solid rgba(166, 124, 82, 0.55);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-form-wrapper * {
+      transition: none !important;
+    }
+}
+
 /* Footer styles */
 .site-footer {
     background-color: var(--accent-color);

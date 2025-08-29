@@ -1,0 +1,85 @@
+---
+layout: minimalonepage
+title: Contact
+permalink: /contact/
+---
+
+<div class="hero-section farm">
+    <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>Have a question or just want to say hello? We'd love to hear from you.</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <h2 id="contact-form-title" class="section-title">Send us a message</h2>
+        <div class="form-card contact-form-wrapper">
+            <form action="https://smartforms.dev/submit/68b0719cc184545ccc0c851a" method="POST" aria-labelledby="contact-form-title">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" type="text" name="name" required autocomplete="name" placeholder="Jane Doe">
+              </div>
+
+              <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" type="email" name="email" required autocomplete="email" placeholder="jane@example.com">
+              </div>
+
+              <div class="field">
+                <label for="tel">Phone (optional)</label>
+                <input id="tel" type="tel" name="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 123-4567" aria-describedby="tel-hint">
+                <p id="tel-hint" class="hint">We’ll use this only if we need to reach you quickly.</p>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="How can we help?"></textarea>
+              </div>
+
+              <button type="submit" aria-label="Send message">Send message</button>
+            </form>
+        </div>
+    </div>
+  </section>
+
+  <script>
+    (function() {
+      function formatUSPhone(value) {
+        const digits = (value || '').replace(/\D/g, '').slice(0, 11);
+        let prefix = '';
+        let n = digits;
+        if (n.length > 10 && n[0] === '1') {
+          prefix = '1 ';
+          n = n.slice(1);
+        }
+        if (n.length === 0) return prefix;
+        if (n.length < 4) return prefix + n;
+        if (n.length < 7) return `${prefix}(${n.slice(0,3)}) ${n.slice(3)}`;
+        return `${prefix}(${n.slice(0,3)}) ${n.slice(3,6)}-${n.slice(6,10)}`;
+      }
+
+      function applyFormat(el) {
+        const formatted = formatUSPhone(el.value);
+        el.value = formatted;
+      }
+
+      function onInput(e) {
+        const el = e.target;
+        const wasEnd = el.selectionStart === el.value.length;
+        applyFormat(el);
+        if (wasEnd) {
+          el.setSelectionRange(el.value.length, el.value.length);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var tel = document.getElementById('tel');
+        if (!tel) return;
+        // Format any prefilled value (e.g., autofill)
+        applyFormat(tel);
+        tel.addEventListener('input', onInput);
+        tel.addEventListener('blur', function(){ applyFormat(tel); });
+      });
+    })();
+  </script>
