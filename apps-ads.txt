@@ -1,0 +1,6 @@
+# app-ads.txt — Authorized Sellers for Apps
+# Replace pub-0000000000000000 with your AdMob publisher ID.
+# Field order: <ad system domain>, <publisher account ID>, <DIRECT|RESELLER>, <cert auth ID>
+
+# AdMob
+google.com, pub-9065244434729412, DIRECT, f08c47fec0942fa0
